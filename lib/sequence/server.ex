@@ -15,7 +15,7 @@ defmodule Sequence.Server do
   end
 
   def next, do: next_number
-  def inc(d), do: increment_number(d)
+  def inc d, do: increment_number d
 
   def next_number do
     with number = GenServer.call( __MODULE__, :next_number ), do:
