@@ -3,9 +3,8 @@ defmodule Sequence.Stash do
 
   ##########
   # External Applications
-  def start_link(current_number) do
-    { :ok, _pid } = GenServer.start_link( __MODULE__,
-                                          current_number )
+  def start_link(value) do
+    { :ok, _pid } = GenServer.start_link( __MODULE__, value )
   end
 
   def save_value(pid,value) do
