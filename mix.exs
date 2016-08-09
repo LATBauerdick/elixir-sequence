@@ -16,7 +16,7 @@ defmodule Sequence.Mixfile do
   def application do
     [
       mod:        { Sequence, [] },
-      env:        [ initial_number: 456],
+      env:        [ initial_number: 456, initial_delta: 1 ],
       registered: [ Sequence.Server ]
     ]
   end
